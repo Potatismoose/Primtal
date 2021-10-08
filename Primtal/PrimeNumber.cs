@@ -23,7 +23,7 @@ namespace Primtal
                 return false;
             }
             //Check if number is a even number but not 2
-            else if (number % 2 == 0 && number !=2)
+            else if (number % 2 == 0 && number != 2)
             {
                 return false;
             }
@@ -31,7 +31,8 @@ namespace Primtal
             //dividability with all numbers from 2 up til result from square root.
             //If dividable with a number, return false.
             //Else check if number already been added and add number if it does not already exists in list
-            for (int i = 2; i <= Math.Sqrt(number); i++)
+            var squareRoot = Math.Sqrt(number);
+            for (int i = 2; i <= squareRoot; i++)
             {
                 if (number % i == 0)
                 {
@@ -53,7 +54,7 @@ namespace Primtal
         internal void ListPrimeNumbers()
         {
             Console.WriteLine();
-            
+
             if (primeNumbers.Count > 0)
             {
                 Console.WriteLine("\tHär är de primtal du angett eller genererat:");
@@ -75,14 +76,17 @@ namespace Primtal
         /// Method that takes the last integer in the sorted list and calculates the next prime number
         /// </summary>
         /// <returns>Returns the next integer that is a prime number</returns>
-        internal int CalculateNextPrimeNumber(){
+        internal int CalculateNextPrimeNumber()
+        {
             int highestNumber;
-            if (primeNumbers.Count == 0){
+            if (primeNumbers.Count == 0)
+            {
                 highestNumber = default;
             }
-            else{
+            else
+            {
                 //Takes the last number (value) of the sorted list and assigns it value to highestNumber
-                 highestNumber = primeNumbers.Values[^1];
+                highestNumber = primeNumbers.Values[^1];
             }
             //Loop that runs until it finds the next prime number.
             while (true)
