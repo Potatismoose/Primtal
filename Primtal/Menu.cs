@@ -101,7 +101,7 @@ namespace Primtal
                 Console.WriteLine("\n\tPrimtal?");
                 Console.WriteLine("\t" + errorMsg);
                 Console.Write("\tKontrollera det här talet/> ");
-                var isNumber = int.TryParse(Console.ReadLine(), out input);
+                var isNumber = int.TryParse(Console.ReadLine().Replace(" ", ""), out input);
                 if (isNumber && input > 0)
                 {
                     wrongInput = false;
