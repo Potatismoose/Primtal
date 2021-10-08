@@ -49,7 +49,7 @@ namespace Primtal
                     case 1:
                         //Recieves validated input from user
                         number = InputNumber();
-                        //Calculates if number is Prime number
+                        //Calculates if number is Prime number 
                         var isPrimenumber = pm.Calculate(number);
 
                         //If number is primenumber
